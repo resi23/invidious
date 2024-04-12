@@ -303,7 +303,7 @@ module Invidious::Routes::Watch
     download_widget = JSON.parse(selection)
 
     extension = download_widget["ext"].as_s
-    filename = "#{title}-#{video_id}.#{extension}"
+    filename = "#{title}.#{extension}"
 
     # Delete the now useless URL parameters
     env.params.body.delete("id")
