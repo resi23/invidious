@@ -16,7 +16,7 @@ module Invidious::Routes::Watch
       if env.params.query["v"].empty?
         return error_template(400, "Invalid parameters.")
       end
-E
+
       if id.size > 11
         url = "/watch?v=#{id[0, 11]}"
         env.params.query.delete_all("v")
